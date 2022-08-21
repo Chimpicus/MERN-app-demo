@@ -55,13 +55,11 @@ const deleteWorkout = async (req, res) => {
   }
 
   const workout = await Workout.findOneAndDelete({ _id: id });
-
   if (!Workout) {
     return res
       .status(404)
       .json({ error: `Unable to find workout with id ${id}` });
   }
-
   res.status(200).json(workout);
 };
 
