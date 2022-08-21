@@ -62,9 +62,7 @@ const deleteWorkout = async (req, res) => {
   }
   res.status(200).json(workout);
 };
-
 // update a workout
-
 const updateWorkout = async (req, res) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -72,7 +70,6 @@ const updateWorkout = async (req, res) => {
       .status(404)
       .json({ error: `Unable to find workout with id ${id}` });
   }
-
   const workout = await Workout.findOneAndUpdate({ _id: id }, { ...req.body });
 
   if (!Workout) {
