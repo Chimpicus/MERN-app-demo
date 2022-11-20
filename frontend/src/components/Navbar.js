@@ -7,6 +7,10 @@ const Navbar = () => {
         <Link to="/">
           <h1>Workout Buddy</h1>
         </Link>
+        <nav>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Signup</Link>
+        </nav>
       </div>
     </header>
   );
