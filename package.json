@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "fe:start": "cd frontend && yarn start",
+    "be:start": "cd backend && yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
